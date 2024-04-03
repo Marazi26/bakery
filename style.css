@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1340px;
+}
+
+/*** NAV ***************************************************************************************/
+
+nav {
+    background-color: #212529;
+}
+
+.top-nav,
+.bottom-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16rem;
+}
+
+/*** Top Nav **************************/
+.top-nav {
+    border-bottom: 1px solid #2c3237;
+    padding-top: .4rem;
+    padding-bottom: 1rem;
+}
+
+.top-nav img {
+    width: 5.5%;
+}
+
+.top-nav a span {
+    color: #bc8c4c;
+    font-family: "Fira Sans", sans-serif;
+    text-transform: uppercase;
+    padding-right: .5rem;
+}
+
+.top-nav a span:hover {
+    color: #886433;
+    font-family: "Fira Sans", sans-serif;
+}
+
+.top-nav a {
+    color: #adb5bd;
+    font-family: "Fira Sans", sans-serif;
+    font-weight: bold;
+    font-size: .8rem;
+}
+
+/*** Bottom Nav**************************/
+
+.bottom-nav {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.left-nav ul li a {
+    color: #ffffff;
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.left-nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.right-nav a {
+    font-family: "Fira Sans", sans-serif;
+    background-color: #bc8c4c;
+    font-size: 1rem;
+    color: #ffffffb3;
+    padding: .5rem 1rem;
+    border-radius: .2rem;
+}
+
+.right-nav a:hover {
+    background-color: #a4783d;
+    border-color: #9b713a;
+}
+
+.right-nav a:focus {
+    box-shadow: 0 0 0 .2rem rgba(198, 157, 103, .5);
+}
+
+.burger-menu{
+    display: none;
+}
+
+/*** NAV TABLET ***********************************************************************************************************************/
+
+@media screen and (min-width:768px) and (max-width:1024px) {
+
+    .top-nav,
+    .bottom-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 3rem;
+    }
+
+    /*** Top Nav **************************/
+    .top-nav {
+        border-bottom: 1px solid #2c3237;
+        padding-top: .5rem;
+        padding-bottom: .4rem;
+    }
+
+    .top-nav img {
+        width: 6.5%;
+    }
+    
+    /*** Bottom Nav**************************/
+
+    .bottom-nav {
+        padding-top: 1.5rem;
+        padding-bottom: 1rem;
+    }
+
+    .left-nav ul li:first-letter {
+        text-transform: uppercase;
+    }
+
+}
+
+/*** NAV MOBILE ***********************************************************************************************************************/
+
+@media screen and (min-width:320px) and (max-width:768px) {
+
+    .bottom-nav{
+        display: none;
+    }
+
+    .burger-menu{
+        display: block;
+    }
+
+    .top-nav,
+    .burger-menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem;
+    }
+
+    /*** Top Nav **************************/
+    .top-nav {
+        border-bottom: 1px solid #2c3237;
+        padding-top: .5rem;
+        padding-bottom: .7rem;
+    }
+
+    .top-nav img {
+        width: 15%;
+    }
+    
+    /*** Burger Menu**************************/
+
+    .burger-menu {
+        padding-top: .7rem;
+        padding-bottom: .8rem;
+        border-bottom: 2px solid #2c3237;
+        display: flex;
+        justify-content: right;
+    }
+
+    .burger-menu i {
+        font-size: 2rem;
+        color: #ffffff;
+        border: 1px solid #464b4e;
+        padding: 0 .8rem;
+        border-radius: .2rem;
+    }
+
+}
