@@ -322,8 +322,15 @@ header {
     gap: 2rem;
 }
 
+.about-section2-div {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 100%;
+}
+
 .about-img-div {
-    width: 25%;
+    width: 50%;
     border-radius: .2rem;
 }
 
@@ -358,12 +365,13 @@ header {
     letter-spacing: 1px;
 }
 
-.about-info p{
+.about-info p {
     font-family: "Fira Sans", sans-serif;
     font-size: 1rem;
     color: #7c7c7c;
     font-weight: 550;
 }
+
 .about-info ul li span {
     color: #7c7c7c;
     font-weight: bold;
@@ -373,6 +381,7 @@ header {
 .about-info ul {
     padding-bottom: 2.5rem;
 }
+
 .about-info a {
     font-family: "Fira Sans", sans-serif;
     background-color: #bc8c4c;
@@ -402,36 +411,36 @@ header {
         gap: 2rem;
     }
 
-    .about-section2{
-        flex-direction: column-reverse;
+    .about-section2 {
         padding-bottom: 5rem;
+        flex-direction: column-reverse;
     }
-    .about-section2-div{
-        display: flex;
-        justify-content: space-between;
-    }
-    .about-info{
+
+    .about-info {
         width: 100%;
     }
 
     .about-img-div {
         width: 45%;
+
     }
 
-    .about-info h3{
+    .about-info h3 {
         font-size: 1rem;
         font-size: bold;
     }
 
-    .about-info p{
-        line-height:1.5rem;
+    .about-info p {
+        line-height: 1.5rem;
         font-size: 1rem;
     }
+
     .about-info ul li,
-    .about-info a{
+    .about-info a {
         font-size: 0.8rem;
     }
-    .about-info h2{
+
+    .about-info h2 {
         font-size: 1.4rem;
     }
 
