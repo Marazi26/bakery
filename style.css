@@ -169,9 +169,10 @@ nav {
         padding: 0 .5rem;
     }
 
-    .top-nav{
+    .top-nav {
         padding: 0 1rem;
     }
+
     /*** Top Nav **************************/
     .top-nav {
         border-bottom: 1px solid #2c3237;
@@ -307,6 +308,140 @@ header {
         font-size: 2.2rem;
         letter-spacing: -1px;
         padding-bottom: 1.5rem;
+    }
+
+}
+
+/*** ABOUT **********************************************************************************************/
+.about-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5.5rem 16rem;
+    /* background-color: #212529; */
+    gap: 2rem;
+}
+
+.about-section2-div {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 100%;
+}
+
+.about-img-div {
+    width: 50%;
+    border-radius: .2rem;
+}
+
+.about-img-div img {
+    border-radius: .2rem;
+}
+
+.about-info {
+    width: 50%;
+}
+
+.about-info h3 {
+    font-family: "Fira Sans", sans-serif;
+    color: #bebebe;
+    font-size: 1.06rem;
+    font-weight: 400;
+    padding-bottom: .3rem;
+}
+
+.about-info h2 {
+    font-family: "Fira Sans", sans-serif;
+    color: #444444;
+    font-size: 2.06rem;
+    padding-bottom: 1rem;
+}
+
+.about-info ul li {
+    font-family: "Fira Sans", sans-serif;
+    color: #c8cdd2;
+    font-size: 1rem;
+    padding-bottom: .5rem;
+    letter-spacing: 1px;
+}
+
+.about-info p {
+    font-family: "Fira Sans", sans-serif;
+    font-size: 1rem;
+    color: #7c7c7c;
+    font-weight: 550;
+}
+
+.about-info ul li span {
+    color: #7c7c7c;
+    font-weight: bold;
+    letter-spacing: 0;
+}
+
+.about-info ul {
+    padding-bottom: 2.5rem;
+}
+
+.about-info a {
+    font-family: "Fira Sans", sans-serif;
+    background-color: #bc8c4c;
+    font-size: .9rem;
+    color: #ffffffb3;
+    padding: .5rem .9rem;
+    border-radius: .2rem;
+}
+
+/*** ABOUT TABLET **********************************************************************************************/
+@media screen and (min-width:768px) and (max-width:1024px) {
+    .about-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5.5rem 3rem;
+        /* background-color: #212529; */
+        gap: 2rem;
+    }
+}
+
+/*** ABOUT MOBILE **********************************************************************************************/
+@media screen and (min-width:320px) and (max-width:768px) {
+    .about-section {
+        flex-wrap: wrap;
+        padding: 5.5rem 1rem 0 1rem;
+        gap: 2rem;
+    }
+
+    .about-section2 {
+        padding-bottom: 5rem;
+        flex-direction: column-reverse;
+    }
+
+    .about-info {
+        width: 100%;
+    }
+
+    .about-img-div {
+        width: 45%;
+
+    }
+
+    .about-info h3 {
+        font-size: 1rem;
+        font-size: bold;
+    }
+
+    .about-info p {
+        line-height: 1.5rem;
+        font-size: 1rem;
+    }
+
+    .about-info ul li,
+    .about-info a {
+        font-size: 0.8rem;
+    }
+
+    .about-info h2 {
+        font-size: 1.4rem;
     }
 
 }
