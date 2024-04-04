@@ -246,6 +246,7 @@ header {
     font-weight: 700;
 }
 
+.book-a-table,
 .overlay a {
     font-family: "Fira Sans", sans-serif;
     background-color: #bc8c4c;
@@ -454,6 +455,7 @@ header {
 .overlay-dishes {
     background-color: rgba(255, 255, 255, .6);
     padding: 0 16rem;
+    padding-bottom: 7rem;
 
 }
 
@@ -536,7 +538,35 @@ header {
     .overlay-dishes {
         background-color: rgba(255, 255, 255, .6);
         padding: 0 3rem;
+        margin-bottom: 5rem;
+        padding-bottom: 7rem;
     }
+
+
+    .dishes-carts {
+        align-items: flex-start;
+    }
+
+    .dish-img-div {
+        width: 30%;
+        overflow: hidden;
+        border-radius: .2rem;
+    }
+
+    .dish-top-div h2 {
+        font-size: 1.1rem;
+    }
+
+    .dish-top-div p {
+        font-size: 1.5rem;
+    }
+
+    .dish-bottom-div p {
+        font-size: 1.1rem;
+        padding: .8rem 0 .7rem 0;
+        word-spacing: 1px;
+    }
+
 }
 
 /*** DISHES MOBILE ****************************************************************************************************/
@@ -582,4 +612,241 @@ header {
         word-spacing: 1px;
     }
 
+}
+
+/*** MAIN MENU ****************************************************************************************************/
+
+.main-menu-section {
+    background-image: url("./assets/images/main-menu/section.jpg");
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* top: 0; */
+}
+
+.main-menu-overlay {
+    padding: 0 16rem 5rem 16rem;
+    background-color: #00000091;
+}
+
+/*** Title Menu************************************/
+.title-main-menu {
+    padding: 5rem 0;
+}
+
+.title-main-menu h3 {
+    font-size: 1.163rem;
+    font-family: "Fira Sans", sans-serif;
+    color: #888073;
+    font-weight: 600;
+}
+
+.title-main-menu h2 {
+    font-size: 2.063rem;
+    font-family: "Fira Sans", sans-serif;
+    color: #ffffff;
+}
+
+.title-main-menu {
+    text-align: center;
+}
+
+/*** Info Menu**********************/
+.info-main-menu {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 1rem 2.5rem;
+    border-radius: .3rem;
+}
+
+.main-menu-cart {
+    display: flex;
+    justify-content: space-between;
+    align-items: first baseline;
+    gap: 1rem;
+    border-bottom: 2px dotted #dee2e6;
+    width: 47%;
+}
+
+.info-main-menu h2 {
+    font-family: "Fira Sans", sans-serif;
+    font-size: 1rem;
+    color: #212529;
+    font-weight: 500;
+    padding: 2rem 0 .5rem 0;
+}
+
+.info-main-menu p {
+    font-family: "Fira Sans", sans-serif;
+    color: #a2a2a2;
+    font-size: 1rem;
+    font-weight: 400;
+    /* padding: .8rem 0 .7rem 0; */
+    word-spacing: 1px;
+    padding-bottom: 0rem;
+}
+
+.main-menu-price h3 {
+    font-family: "Fira Sans", sans-serif;
+    color: #bc8c4c;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.booking-table {
+    padding-top: 4rem;
+    padding-bottom: 1rem;
+    margin: 0 auto;
+}
+
+/*** MAIN MENU TABLET ****************************************************************************************************/
+
+@media screen and (min-width:768px) and (max-width:1024px) {
+    .main-menu-section {
+        background-size: cover;
+        background-position: top center;
+    }
+
+    .main-menu-overlay {
+        padding: 0 3rem 5rem 3rem;
+        background-color: #00000091;
+    }
+
+    /*** Title Menu************************************/
+    .title-main-menu {
+        padding: 5rem 0;
+    }
+
+    .title-main-menu h3 {
+        font-size: 1.163rem;
+    }
+
+    .title-main-menu h2 {
+        font-size: 2.063rem;
+    }
+
+    /*** Info Menu**********************/
+    .info-main-menu {
+        gap: 1.5rem;
+        padding: 1rem 2.5rem;
+        border-radius: .3rem;
+        width: 48rem;
+        margin: 0 auto;
+    }
+
+    .main-menu-cart {
+        gap: 1rem;
+        border-bottom: 2px dotted #dee2e6;
+        width: 45%;
+    }
+
+    .info-main-menu h2 {
+        font-size: 1.5rem;
+        padding: 2rem 0 .5rem 0;
+    }
+
+    .info-main-menu h2 {
+        font-size: 1.2rem;
+        color: #212529;
+        font-weight: 500;
+        padding: 2rem 0 .5rem 0;
+    }
+    
+    .info-main-menu p {
+        font-size: 1.1rem;
+        padding-bottom: .7rem;
+        font-weight: lighter;
+    }
+    .main-menu-price h3 {
+        font-weight: 500;
+        font-size: 1.5rem;
+    }
+
+    .booking-table {
+        padding-top: 4rem;
+        padding-bottom: 1rem;
+        margin: 0 auto;
+    }
+
+    .book-a-table{
+        font-size: 1.2rem;
+    }
+}
+
+/*** MAIN MENU TABLET ****************************************************************************************************/
+
+@media screen and (min-width:320px) and (max-width:768px) {
+    .main-menu-section {
+        background-size: cover;
+        background-position: top center;
+    }
+
+    .main-menu-overlay {
+        padding: 0 3rem 5rem 3rem;
+        background-color: #00000091;
+    }
+
+    /*** Title Menu************************************/
+    .title-main-menu {
+        padding: 5rem 0;
+    }
+
+    .title-main-menu h3 {
+        font-size: 1.163rem;
+    }
+
+    .title-main-menu h2 {
+        font-size: 2.063rem;
+    }
+
+    /*** Info Menu**********************/
+    .info-main-menu {
+        gap: 1.5rem;
+        padding: 1rem 2.5rem;
+        border-radius: .3rem;
+        width: unset;
+        margin: 0 auto;
+    }
+
+    .main-menu-cart {
+        gap: 1rem;
+        border-bottom: 2px dotted #dee2e6;
+        width: 100%;
+    }
+
+    .info-main-menu h2 {
+        font-size: 1.5rem;
+        padding: 2rem 0 .5rem 0;
+    }
+
+    .info-main-menu h2 {
+        font-size: 1.2rem;
+        color: #212529;
+        font-weight: 500;
+        padding: 2rem 0 .5rem 0;
+    }
+    
+    .info-main-menu p {
+        font-size: 1.1rem;
+        padding-bottom: .7rem;
+        font-weight: lighter;
+    }
+    .main-menu-price h3 {
+        font-weight: 500;
+        font-size: 1.5rem;
+    }
+
+    .booking-table {
+        padding-top: 4rem;
+        padding-bottom: 1rem;
+        margin: 0 auto;
+    }
+
+    .book-a-table{
+        font-size: 1.2rem;
+    }
 }
