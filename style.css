@@ -1168,7 +1168,7 @@ header {
         padding: 1rem 0 3rem;
     }
 
-    .title-testmonial h2{
+    .title-testmonial h2 {
         font-size: 1.7rem;
         letter-spacing: 1px;
     }
@@ -1217,9 +1217,10 @@ header {
         background-image: url(./assets/images/style-3.png);
     }
 
-    .carts-testmonial{
+    .carts-testmonial {
         flex-wrap: wrap;
     }
+
     .cart-testmonial {
         width: 100%;
         margin-bottom: 2rem;
@@ -1238,7 +1239,7 @@ header {
         padding: 1rem 0 3rem;
     }
 
-    .title-testmonial h2{
+    .title-testmonial h2 {
         font-size: 1.7rem;
         letter-spacing: 1px;
     }
@@ -1266,4 +1267,197 @@ header {
     .client-review p {
         font-size: 1.1rem;
     }
+}
+
+
+/*** BOOKING SECTION ****************************************************************************************************/
+
+.overlay-booking {
+    padding: 4rem 16rem;
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+}
+
+.booking-img-div {
+    /* border: 1px solid red; */
+    width: 50%;
+    border-radius: .4rem;
+    overflow: hidden;
+}
+
+.booking-form-div {
+    /* border: 1px solid red; */
+    width: 49%;
+    padding-top: 2.3rem;
+    padding-left: 1rem;
+}
+
+.booking-form-div form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+    /* border: 1px solid red; */
+}
+
+.booking-form-div form input {
+    border: 1px solid #dfdfdf;
+    padding: 1rem 0;
+    outline: none;
+    border-radius: .3rem;
+}
+
+.booking-form-div form input::placeholder {
+    padding: 1rem;
+    font-size: 1rem;
+    font-family: "Fira Sans";
+}
+
+.booking-form-div form input:focus {
+    box-shadow: 0 0 0 .2rem rgba(198, 157, 103, .5);
+    padding: 1rem;
+}
+
+/* .carets{
+    display: none;
+}
+.booking-form-div input[type="date"]:hover .carets{
+    display: block;
+} */
+.carets {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: .5rem;
+    bottom: 5rem;
+}
+
+.carets i {
+    background-color: #e5e8ea;
+    color: #495057;
+    width: .9rem;
+    text-align: center;
+    font-size: .6rem;
+}
+
+.carets .down:hover,
+.carets .up:hover {
+    background-color: #ced4da;
+}
+
+input[type="button"] {
+    background-color: #a4783d;
+    border-color: #9b713a;
+    color: #ffffff;
+    width: 100%;
+    font-family: "Fira Sans";
+    font-size: 1rem;
+}
+
+.booking-form-div p {
+    font-size: .8rem;
+    font-family: "Fira Sans", sans-serif;
+    color: #a2a2a2;
+    padding-top: 1rem;
+    padding-left: .2rem;
+    font-weight: light;
+}
+
+.booking-form-div p>a {
+    font-size: .8rem;
+    font-family: "Fira Sans", sans-serif;
+    color: #bc8c4c;
+    padding-top: 1rem;
+    padding-left: .2rem;
+    font-weight: light;
+}
+
+.booking-form-div p>a:hover {
+    color: #886433;
+}
+
+/*** BOOKING SECTION TABLET ****************************************************************************************************/
+
+@media screen and (min-width:768px) and (max-width:1024px) {
+
+    .overlay-booking {
+        padding: 4rem 3rem;
+    }
+
+    .booking-img-div {
+        /* border: 1px solid red; */
+        width: 49.3%;
+        border-radius: .4rem;
+        overflow: hidden;
+    }
+
+    .booking-form-div {
+        width: 49.3%;
+        padding-top: .7rem;
+        padding-left: 1rem;
+    }
+
+    .booking-form-div form {
+        gap: .8rem;
+    }
+
+    .booking-form-div form input {
+        padding: .7rem 0;
+    }
+
+    .carets {
+        right: .7rem;
+        bottom: 4rem;
+    }
+
+    .booking-form-div p {
+        font-size: .9rem;
+    }
+
+    .booking-form-div p>a {
+        font-size: .9rem;
+    }
+
+}
+
+/*** BOOKING SECTION TABLET ****************************************************************************************************/
+
+@media screen and (min-width:320px) and (max-width:768px) {
+
+    .overlay-booking {
+        padding: 4rem 2.5rem;
+    }
+
+    .booking-img-div {
+        display: none;
+    }
+
+    .booking-form-div {
+        width: 100%;
+        padding-top: unset;
+    }
+
+    .booking-form-div form {
+        gap: 1rem;
+    }
+
+    .booking-form-div form input {
+        padding: 1rem 0;
+        font-size: 1rem;
+    }
+
+    .carets {
+        right: .8rem;
+        bottom: 5rem;
+    }
+
+    .booking-form-div p {
+        font-size: 1rem;
+    }
+
+    .booking-form-div p>a {
+        font-size: 1rem;
+    }
+
 }
