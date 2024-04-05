@@ -973,7 +973,9 @@ header {
 
 
     .chef-info p {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+        font-weight: 400;
+        /* color: #444444; */
     }
 
     .chef-info ul {
@@ -1020,13 +1022,13 @@ header {
     .chef-img-div {
         width: 30%;
     }
-    
+
     .chef-info h2 {
         font-size: 1.4rem;
     }
 
     .chef-info p {
-        font-family: "Fira Sans",sans-serif;
+        font-family: "Fira Sans", sans-serif;
         font-size: 1.2rem;
         padding-bottom: 1rem;
         font-weight: 400;
@@ -1044,4 +1046,224 @@ header {
 
 }
 
-/*********************************************************************************************
+/*** TESTMONIALS ******************************************************************************************/
+
+.overlay-testimonal {
+    padding: 4rem 15rem;
+    background-image: url(./assets/images/style-3.png);
+}
+
+.carts-testmonial {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cart-testmonial {
+    width: 33%;
+}
+
+.cart-about-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-testmonial {
+    border: 1px solid #dfdfdf;
+    border-radius: .2rem;
+    padding: 1.5rem;
+}
+
+
+/*** Title testmonial **********************/
+
+.title-testmonial {
+    padding: 1rem 0 5rem;
+}
+
+.title-testmonial h3 {
+    font-size: 1.163rem;
+    font-family: "Fira Sans", sans-serif;
+    color: #a2a2a2;
+    font-weight: 400;
+}
+
+.title-testmonial h2 {
+    font-size: 2.063rem;
+    font-family: "Fira Sans", sans-serif;
+    color: #444444;
+}
+
+.title-testmonial {
+    text-align: center;
+}
+
+/*** About Testimonial**************************/
+
+.testmonial-img-div {
+    width: 15%;
+    border-radius: 50%;
+}
+
+.testmonial-img-div img {
+    border-radius: 50%;
+    width: 100%;
+}
+
+.client-about {
+    width: 84%;
+}
+
+.client-about h2 {
+    font-size: 1rem;
+    font-family: "Fira Sans", sans-serif;
+    color: #444444;
+    font-weight: 500;
+    padding: 0 2rem 0 .5rem;
+}
+
+.client-about h3 {
+    font-size: .8rem;
+    font-family: "Fira Sans", sans-serif;
+    color: #a2a2a2;
+    padding: .2rem 2rem 0 .5rem;
+    font-weight: normal;
+}
+
+.client-review p {
+    font-size: 1rem;
+    font-family: "Fira Sans", sans-serif;
+    color: #a2a2a2;
+    padding-top: 1rem;
+    font-weight: light;
+    text-wrap: wrap;
+}
+
+
+/*** TESTMONIALS TABLET******************************************************************************************/
+
+@media screen and (min-width:768px) and (max-width:1024px) {
+
+    .overlay-testimonal {
+        padding: 4rem 3rem;
+        background-image: url(./assets/images/style-3.png);
+    }
+
+    .cart-testmonial {
+        width: 33%;
+    }
+
+    .cart-testmonial {
+        border: 1px solid #dfdfdf;
+        border-radius: .2rem;
+        padding: 1.5rem;
+    }
+
+
+    /*** Title testmonial **********************/
+
+    .title-testmonial {
+        padding: 1rem 0 3rem;
+    }
+
+    .title-testmonial h2{
+        font-size: 1.7rem;
+        letter-spacing: 1px;
+    }
+
+    /*** About Testimonial**************************/
+
+    .testmonial-img-div {
+        width: 25%;
+    }
+
+    .client-about {
+        width: 74%;
+    }
+
+    .client-about h2 {
+        font-size: 1.1rem;
+        font-weight: 400;
+        padding: 0;
+        padding-left: .5rem;
+    }
+
+    .client-about h3 {
+        font-size: .9rem;
+        font-weight: 400;
+        padding: 0;
+        padding-left: .5rem;
+    }
+
+    .client-review p {
+        font-size: 1rem;
+        text-wrap: wrap;
+        font-weight: light;
+        padding: 0;
+        padding-top: .5rem;
+        line-height: 1.25rem;
+    }
+}
+
+/*** TESTMONIALS MOBILE******************************************************************************************/
+
+@media screen and (min-width:320px) and (max-width:768px) {
+
+    .overlay-testimonal {
+        padding: 4rem 3rem;
+        padding-top: 0rem;
+        background-image: url(./assets/images/style-3.png);
+    }
+
+    .carts-testmonial{
+        flex-wrap: wrap;
+    }
+    .cart-testmonial {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .cart-testmonial {
+        border: 1px solid #dfdfdf;
+        border-radius: .2rem;
+        padding: 1.5rem;
+    }
+
+
+    /*** Title testmonial **********************/
+
+    .title-testmonial {
+        padding: 1rem 0 3rem;
+    }
+
+    .title-testmonial h2{
+        font-size: 1.7rem;
+        letter-spacing: 1px;
+    }
+
+    /*** About Testimonial**************************/
+
+    .testmonial-img-div {
+        width: 15%;
+    }
+
+    .client-about {
+        width: 80%;
+    }
+
+    .client-about h2 {
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+    .client-about h3 {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    .client-review p {
+        font-size: 1.1rem;
+    }
+}
