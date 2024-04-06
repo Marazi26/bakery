@@ -1,0 +1,1665 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1340px;
+}
+
+::-webkit-scrollbar {
+    width: .3rem;
+}
+
+::-webkit-scrollbar-track {
+    background: #212529;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #a4783d;
+    border-radius: .3rem;
+    height: 6.5rem;
+}
+
+/*** ANIMATIN START *************************************************************************************************************/
+
+@keyframes photoCyckle {
+    0% {
+        transform: rotate(0deg);
+        transform: scaleX(1);
+    }
+    25% {
+        transform: scaleX(0.9);
+        transform: rotate(-10deg);
+        box-shadow: 1px 2px 1px 2px #9b713a;
+    }
+
+    50% {
+        transform: scaleX(1);
+        transform: rotate(-32deg)
+    }
+
+    75% {
+        transform: scaleX(0.9);
+        transform: rotate(-10deg)
+    }
+
+    100% {
+        transform: scaleX(1);
+        transform: rotate(360deg);
+    }
+}
+
+/*** ANIMATIN END *************************************************************************************************************/
+
+/*** NAV ***************************************************************************************/
+
+nav {
+    background-color: #212529;
+}
+
+.top-nav,
+.bottom-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16rem;
+}
+
+/*** Top Nav **************************/
+.top-nav {
+    border-bottom: 1px solid #2c3237;
+    padding-top: .3rem;
+    padding-bottom: .4rem;
+}
+
+.top-nav img {
+    width: 5.5%;
+}
+
+.top-nav a span {
+    color: #bc8c4c;
+    font-family: "Fira Sans", sans-serif;
+    text-transform: uppercase;
+    padding-right: .5rem;
+}
+
+.top-nav a span:hover {
+    color: #886433;
+    font-family: "Fira Sans", sans-serif;
+}
+
+.top-nav a {
+    color: #adb5bd;
+    font-family: "Fira Sans", sans-serif;
+    font-weight: bold;
+    font-size: .8rem;
+}
+
+/*** Bottom Nav**************************/
+
+.bottom-nav {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+
+.left-nav ul li a {
+    color: #ffffff;
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 700;
+    font-size: .8rem;
+}
+
+.left-nav ul li a:hover {
+    color: #adb5bd;
+}
+
+.left-nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: .4rem;
+    gap: 2rem;
+}
+
+.right-nav a {
+    font-family: "Fira Sans", sans-serif;
+    background-color: #bc8c4c;
+    font-size: .9rem;
+    color: #ffffffb3;
+    padding: .4rem .8rem;
+    border-radius: .2rem;
+}
+
+.right-nav a:hover {
+    background-color: #a4783d;
+    border-color: #9b713a;
+}
+
+.right-nav a:focus {
+    box-shadow: 0 0 0 .2rem rgba(198, 157, 103, .5);
+}
+
+.burger-menu {
+    display: none;
+}
+
+.bottom-nav{
+    position: sticky;
+    top: 0;
+}
+/*** NAV TABLET ***********************************************************************************************************************/
+
+@media screen and (min-width:768px) and (max-width:1024px) {
+
+    .top-nav,
+    .bottom-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 7rem;
+    }
+
+    /*** Top Nav **************************/
+    .top-nav {
+        border-bottom: 1px solid #2c3237;
+        padding-top: .8rem;
+        padding-bottom: .9rem;
+    }
+
+    .top-nav img {
+        width: 9.5%;
+    }
+
+    /*** Bottom Nav**************************/
+
+    .bottom-nav {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .left-nav ul li:first-letter {
+        text-transform: uppercase;
+    }
+
+}
+
+/*** NAV MOBILE ***********************************************************************************************************************/
+
+@media screen and (min-width:320px) and (max-width:768px) {
+
+    .bottom-nav {
+        display: none;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    .top-nav,
+    .burger-menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 .5rem;
+    }
+
+    /*** Top Nav **************************/
+    .top-nav {
+        border-bottom: 1px solid #2c3237;
+        padding: 0 3rem;
+        padding-top: .5rem;
+        padding-bottom: .6rem;
+    }
+
+    .top-nav img {
+        width: 14%;
+    }
+
+    /*** Burger Menu**************************/
+
+    .burger-menu {
+        padding: 0 3rem;
+        padding-top: .6rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #2c3237;
+        display: flex;
+        justify-content: right;
+    }
+
+    .burger-menu i {
+        font-size: 2rem;
+        color: #ffffff;
+        border: 1px solid #464b4e;
+        padding: 0 .8rem;
+        border-radius: .2rem;
+    }
+
+}
+
+/*** HEADER ****************************************************************************************************************************/
+
+header {
+    background-image: url("./assets/images/header.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+.overlay {
+    background-color: rgba(33, 37, 41, .85);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 1rem;
+}
+
+.overlay img {
+    width: 13%;
+    filter: drop-shadow(0 0 40px rgba(206, 212, 218, .4));
+    padding-bottom: 2rem;
+}
+
+.overlay p {
+    font-family: "Fira Sans", sans-serif;
+    font-size: 1.2rem;
+    color: #ffffff;
+    font-weight: bold;
+    padding-bottom: .5rem;
+
+}
+
+.overlay h1 {
+    font-family: "Fira Sans", sans-serif;
+    font-size: 5.3rem;
+    color: #ffffff;
+    letter-spacing: -5px;
+    padding-bottom: 2.5rem;
+    font-weight: 700;
+
+}
+
+.book-a-table,
+.overlay a {
+    font-family: "Fira Sans", sans-serif;
+    background-color: #bc8c4c;
+    font-size: 1rem;
+    color: #ffffffb3;
+    padding: .7rem 1.3rem;
+    border-radius: .2rem;
+}
+
+.overlay a:hover {
+    background-color: #a4783d;
+    border-color: #9b713a;
+}
+
+.overlay a:focus {
+    box-shadow: 0 0 0 .2rem rgba(198, 157, 103, .5);
+}
+
+/*** HEADER TABLET ****************************************************************************************************************************/
+
+@media screen and (min-width:768px) and (max-width:1024px) {
+
+    .overlay {
+        padding: 7.5rem 1rem;
+    }
+
+    .overlay img {
+        width: 20%;
+    }
+
+    .overlay p {
+        font-size: 1.06rem;
+    }
+
+    .overlay h1 {
+        font-size: 3.8rem;
+        letter-spacing: -1px;
+    }
+
+}
+
+/*** HEADER MOBILE ****************************************************************************************************************************/
+
+@media screen and (min-width:320px) and (max-width:768px) {
+
+    .overlay {
+        padding: 8rem 1rem;
+    }
+
+    .overlay img {
+        width: 50%;
+    }
+
+    .overlay p {
+        font-size: .9rem;
+        padding-bottom: .2rem;
+    }
+
+    .overlay h1 {
+        font-size: 2.2rem;
+        letter-spacing: -1px;
+        padding-bottom: 1.5rem;
+    }
+
+}
+
+/*** ABOUT **********************************************************************************************/
+.about-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5.5rem 16rem;
+    /* background-color: #212529; */
+    gap: 2rem;
+}
+
+.about-section2-div {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 100%;
+}
+
+.about-img-div {
+    width: 50%;
+    border-radius: .2rem;
+}
+
+.about-img-div img {
+    border-radius: .2rem;
+
+}
+
+.about-info {
+    width: 50%;
+}
+
+.about-info h3 {
+    font-family: "Fira Sans", sans-serif;
+    color: #bebebe;
+    font-size: 1.06rem;
+    font-weight: 400;
+    padding-bottom: .3rem;
+}
+
+.about-info h2 {
+    font-family: "Fira Sans", sans-serif;
+    color: #444444;
+    font-size: 2.06rem;
+    padding-bottom: 1rem;
+}
+
+.about-info ul li {
+    font-family: "Fira Sans", sans-serif;
+    color: #c8cdd2;
+    font-size: 1rem;
+    padding-bottom: .5rem;
+    letter-spacing: 1px;
+}
+
+.about-info p {
+    font-family: "Fira Sans", sans-serif;
+    font-size: 1rem;
+    color: #7c7c7c;
+    font-weight: 550;
+}
+
+.about-info ul li span {
+    color: #7c7c7c;
+    font-weight: bold;
+    letter-spacing: 0;
+}
+
+.about-info ul {
+    padding-bottom: 2.5rem;
+}
+
+.about-info a {
+    font-family: "Fira Sans", sans-serif;
+    background-color: #bc8c4c;
+    font-size: .9rem;
+    color: #ffffffb3;
+    padding: .5rem .9rem;
+    border-radius: .2rem;
+}
+
+/*** ABOUT TABLET **********************************************************************************************/
+@media screen and (min-width:768px) and (max-width:1024px) {
+    .about-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5.5rem 3rem;
+        /* background-color: #212529; */
+        gap: 2rem;
+    }
+
+}
+
+/*** ABOUT MOBILE **********************************************************************************************/
+@media screen and (min-width:320px) and (max-width:768px) {
+    .about-section {
+        flex-wrap: wrap;
+        padding: 5.5rem 1rem 0 1rem;
+        gap: 2rem;
+    }
+
+    .about-section2 {
+        padding-bottom: 5rem;
+        flex-direction: column-reverse;
+    }
+
+    .about-info {
+        width: 100%;
+    }
+
+    .about-img-div {
+        width: 45%;
+
+    }
+
+    .about-info h3 {
+        font-size: 1.1rem;
+        font-size: bold;
+    }
+
+    .about-info p {
+        line-height: 1.5rem;
+        font-size: 1rem;
+    }
+
+    .about-info ul li,
+    .about-info a {
+        font-size: 1rem;
+    }
+
+    .about-info h2 {
+        font-size: 1.7rem;
+        padding-bottom: 1.3rem;
+    }
+
+}
+
+/*** DISHES ****************************************************************************************************/
+.dishes-section {
+    background-image: url("./assets/images/dishes/dishes-bg.png");
+}
+
+.overlay-dishes {
+    background-color: rgba(255, 255, 255, .6);
+    padding: 0 16rem;
+    padding-bottom: 7rem;
+
+}
+
+.dishes-title {
+    padding: 5rem 0;
+}
+
+.dishes-title h3 {
+    font-size: 1.063rem;
+    font-family: "Fira Sans", sans-serif;
+    color: #b4b4b4;
+    font-weight: 500;
+}
+
+.dishes-title h2 {
+    font-size: 2.063rem;
+    font-family: "Fira Sans", sans-serif;
+    color: #444444;
+}
+
+.dishes-title {
+    text-align: center;
+}
+
+.dish-top-div,
+.dish-cart,
+.dishes-carts {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dishes-carts {
+    align-items: center;
+}
+
+.dish-cart {
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.dish-img-div {
+    width: 15%;
+    overflow: hidden;
+    border-radius: .2rem;
+}
+
+.dish-info-div {
+    width: 85%;
+}
+
+.dish-top-div {
+    padding: .5rem 0 .8rem 0;
+    border-bottom: 2px dotted #dee2e6;
+}
+
+.dish-top-div h2 {
+    font-family: "Fira Sans", sans-serif;
+    font-size: .9rem;
+    color: #444444;
+}
+
+.dish-top-div p {
+    font-family: "Fira Sans", sans-serif;
+    color: #bc8c4c;
+    font-weight: 700;
+    font-size: 1rem;    
+}
+
+.dish-bottom-div p {
+    font-family: "Fira Sans", sans-serif;
+    color: #a2a2a2;
+    font-size: .8rem;
+    padding: .8rem 0 .7rem 0;
+    word-spacing: 1px;
+}
+
+/*** DISHES TABLET****************************************************************************************************/
+
+@media screen and (min-width:768px) and (max-width:1024px) {
+    .overlay-dishes {
+        background-color: rgba(255, 255, 255, .6);
+        padding: 0 3rem;
+        margin-bottom: 5rem;
+        padding-bottom: 7rem;
+    }
+
+
+    .dishes-carts {
+        align-items: flex-start;
+    }
+
+    .dish-img-div {
+        width: 30%;
+        overflow: hidden;
+        border-radius: .2rem;
+    }
+
+    .dish-top-div h2 {
+        font-size: 1.1rem;
+    }
+
+    .dish-top-div p {
+        font-size: 1.5rem;
+    }
+
+    .dish-bottom-div p {
+        font-size: 1.1rem;
+        padding: .8rem 0 .7rem 0;
+        word-spacing: 1px;
+    }
+
+}
+
+/*** DISHES MOBILE ****************************************************************************************************/
+
+@media screen and (min-width:320px) and (max-width:768px) {
+    .overlay-dishes {
+        background-color: rgba(255, 255, 255, .6);
+        padding: 0 1rem;
+    }
+
+    .dishes-carts {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dish-cart {
+        gap: 1rem;
+        padding: 1rem 0;
+        padding-right: .5rem;
+    }
+
+    .dish-img-div {
+        width: 25%;
+        overflow: hidden;
+        border-radius: .2rem;
+    }
+
+    .dish-info-div {
+        width: 75%;
+    }
+
+    .dish-top-div h2 {
+        font-size: 1.063rem;
+    }
+
+    .dish-top-div p {
+        font-size: 1.2rem;
+    }
+
+    .dish-bottom-div p {
+        font-size: 1rem;
+        padding: 1rem 0 .7rem 0;
+        word-spacing: 1px;
+    }
+
+}
+
+/*** MAIN MENU ****************************************************************************************************/
+
+.main-menu-section {
+    background-image: url("./assets/images/main-menu/section.jpg");
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* top: 0; */
+}
+
+.main-menu-overlay {
+    padding: 0 16rem 5rem 16rem;
+    background-color: #00000091;
+}
+
+/*** Title Menu************************************/
+.title-main-menu {
+    padding: 5rem 0;
+}
+
+.title-main-menu h3 {
+    font-size: 1.163rem;
+    font-family: "Fira Sans", sans-serif;
+    color: #888073;
+    font-weight: 600;
+}
+
+.title-main-menu h2 {
+    font-size: 2.063rem;
+    font-family: "Fira Sans", sans-serif;
+    color: #ffffff;
+}
+
+.title-main-menu {
+    text-align: center;
+}
+
+/*** Info Menu**********************/
+.info-main-menu {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 1rem 2.5rem;
+    border-radius: .3rem;
+}
+
+.main-menu-cart {
+    display: flex;
+    justify-content: space-between;
+    align-items: first baseline;
+    gap: 1rem;
+    border-bottom: 2px dotted #dee2e6;
+    width: 47%;
+}
+
+.info-main-menu h2 {
+    font-family: "Fira Sans", sans-serif;
+    font-size: 1rem;
+    color: #212529;
+    font-weight: 500;
+    padding: 2rem 0 .5rem 0;
+}
+
+.info-main-menu p {
+    font-family: "Fira Sans", sans-serif;
+    color: #a2a2a2;
+    font-size: 1rem;
+    font-weight: 400;
+    /* padding: .8rem 0 .7rem 0; */
+    word-spacing: 1px;
+    padding-bottom: 0rem;
+}
+
+.main-menu-price h3 {
+    font-family: "Fira Sans", sans-serif;
+    color: #bc8c4c;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.booking-table {
+    padding-top: 4rem;
+    padding-bottom: 1rem;
+    margin: 0 auto;
+}
+/*** MAIN MENU TABLET ****************************************************************************************************/
+
+@media screen and (min-width:768px) and (max-width:1024px) {
+    .main-menu-section {
+        background-size: cover;
+        background-position: top center;
+    }
+
+    .main-menu-overlay {
+        padding: 0 1rem 5rem 1rem;
+        background-color: #00000091;
+    }
+
+    /*** Title Menu************************************/
+    .title-main-menu {
+        padding: 5rem 0;
+    }
+
+    .title-main-menu h3 {
+        font-size: 1.163rem;
+    }
+
+    .title-main-menu h2 {
+        font-size: 2.063rem;
+    }
+
+    /*** Info Menu**********************/
+    .info-main-menu {
+        gap: 1.5rem;
+        padding: 1rem 2.5rem;
+        border-radius: .3rem;
+        width: 48rem;
+        margin: 0 auto;
+    }
+
+    .main-menu-cart {
+        gap: 1rem;
+        border-bottom: 2px dotted #dee2e6;
+        width: 45%;
+    }
+
+    .info-main-menu h2 {
+        font-size: 1.5rem;
+        padding: 2rem 0 .5rem 0;
+    }
+
+    .info-main-menu h2 {
+        font-size: 1.2rem;
+        color: #212529;
+        font-weight: 500;
+        padding: 2rem 0 .5rem 0;
+    }
+
+    .info-main-menu p {
+        font-size: 1.1rem;
+        padding-bottom: .7rem;
+        font-weight: lighter;
+    }
+
+    .main-menu-price h3 {
+        font-weight: 500;
+        font-size: 1.5rem;
+    }
+
+    .booking-table {
+        padding-top: 4rem;
+        padding-bottom: 1rem;
+        margin: 0 auto;
+    }
+
+    .book-a-table {
+        font-size: 1.2rem;
+    }
+}
+
+/*** MAIN MENU MOBILE ****************************************************************************************************/
+
+@media screen and (min-width:320px) and (max-width:768px) {
+    .main-menu-section {
+        background-size: cover;
+        background-position: top center;
+    }
+
+    .main-menu-overlay {
+        padding: 0 3rem 5rem 3rem;
+        background-color: #00000091;
+    }
+
+    /*** Title Menu************************************/
+    .title-main-menu {
+        padding: 5rem 0;
+    }
+
+    .title-main-menu h3 {
+        font-size: 1.163rem;
+    }
+
+    .title-main-menu h2 {
+        font-size: 2.063rem;
+    }
+
+    /*** Info Menu**********************/
+    .info-main-menu {
+        gap: 1.5rem;
+        padding: 1rem 2.5rem;
+        border-radius: .3rem;
+        width: unset;
+        margin: 0 auto;
+    }
+
+    .main-menu-cart {
+        gap: 1rem;
+        border-bottom: 2px dotted #dee2e6;
+        width: 100%;
+    }
+
+    .info-main-menu h2 {
+        font-size: 1.5rem;
+        padding: 2rem 0 .5rem 0;
+    }
+
+    .info-main-menu h2 {
+        font-size: 1.2rem;
+        color: #212529;
+        font-weight: 500;
+        padding: 2rem 0 .5rem 0;
+    }
+
+    .info-main-menu p {
+        font-size: 1.1rem;
+        padding-bottom: .7rem;
+        font-weight: lighter;
+    }
+
+    .main-menu-price h3 {
+        font-weight: 500;
+        font-size: 1.5rem;
+    }
+
+    .booking-table {
+        padding-top: 4rem;
+        padding-bottom: 1rem;
+        margin: 0 auto;
+    }
+
+    .book-a-table {
+        font-size: 1.2rem;
+    }
+}
+
+
+/*** CHEFS SECTION ****************************************************************************************************/
+
+.about-chefs {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.chefs-overlay {
+    padding: 0 16rem;
+    padding-bottom: 7rem;
+}
+
+/*** Title Chefs **********************/
+.title-chefs {
+    padding: 6rem 0 5rem;
+}
+
+.title-chefs h3 {
+    font-size: 1.163rem;
+    font-family: "Fira Sans", sans-serif;
+    color: #a2a2a2;
+    font-weight: 400;
+}
+
+.title-chefs h2 {
+    font-size: 2.063rem;
+    font-family: "Fira Sans", sans-serif;
+    color: #444444;
+}
+
+.title-chefs {
+    text-align: center;
+}
+
+/*** About Chefs *******************/
+
+.chef-img-div {
+    overflow: hidden;
+    border-radius: 50%;
+    width: 48%;
+    margin: 0 auto;
+}
+
+.chef-img-div img {
+    border-radius: 50%;
+    animation: photoCyckle 2s linear;
+}
+
+.chef-info h2 {
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: "Fira Sans", sans-serif;
+    color: #444444;
+    padding: 1.5rem;
+}
+
+
+.chef-info p {
+    text-align: center;
+    font-size: 1.1rem;
+    font-family: "Fira Sans", sans-serif;
+    color: #a2a2a2;
+    font-weight: lighter;
+}
+
+.chef-info ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    width: 50%;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.chef-info ul li a {
+    color: #bc8c4c;
+    font-size: 1rem;
+    font-weight: lighter;
+}
+
+.chef-info ul li a:hover {
+    color: #886433;
+}
+
+
+/*** CHEFS SECTION TABLET ****************************************************************************************************/
+
+@media screen and (min-width:768px) and (max-width:1024px) {
+    .chefs-overlay {
+        padding: 0 3rem;
+        padding-bottom: 6rem;
+    }
+
+    /*** Title Chefs **********************/
+    .title-chefs {
+        padding: 6rem 0 5rem;
+    }
+
+    .title-chefs h3 {
+        font-size: 1.4rem;
+    }
+
+    .title-chefs h2 {
+        font-size: 2.4rem;
+    }
+
+    /*** About Chefs *******************/
+
+    .chef-img-div {
+        width: 50%;
+    }
+
+    .chef-info h2 {
+        font-size: 1.4rem;
+    }
+
+
+    .chef-info p {
+        font-size: 1.1rem;
+        font-weight: 400;
+        /* color: #444444; */
+    }
+
+    .chef-info ul {
+        padding: 1rem 0;
+    }
+
+    .chef-info ul li a {
+        font-size: 1.2rem;
+    }
+
+}
+
+/*** CHEFS SECTION MOBILE ****************************************************************************************************/
+
+@media screen and (min-width:320px) and (max-width:768px) {
+
+    .about-chefs {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .chefs-overlay {
+        padding: 0 3rem;
+        padding-bottom: 7rem;
+    }
+
+
+    /*** Title Chefs **********************/
+    .title-chefs {
+        padding: 6rem 0 5rem;
+    }
+
+    .title-chefs h3 {
+        font-size: 1.1rem;
+    }
+
+    .title-chefs h2 {
+        font-size: 2rem;
+    }
+
+    /*** About Chefs *******************/
+
+    .chef-img-div {
+        width: 30%;
+    }
+
+    .chef-info h2 {
+        font-size: 1.4rem;
+    }
+
+    .chef-info p {
+        font-family: "Fira Sans", sans-serif;
+        font-size: 1.2rem;
+        padding-bottom: 1rem;
+        font-weight: 400;
+    }
+
+    .chef-info ul {
+        gap: .5rem;
+        width: 25%;
+        padding: 1rem 0;
+    }
+
+    .chef-info ul li a {
+        font-size: 1.2rem;
+    }
+
+}
+
+/*** TESTMONIALS ******************************************************************************************/
+
+.overlay-testimonal {
+    padding: 4rem 15rem;
+    background-image: url(./assets/images/style-3.png);
+}
+
+.carts-testmonial {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cart-testmonial {
+    width: 33%;
+}
+
+.cart-about-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-testmonial {
+    border: 1px solid #dfdfdf;
+    border-radius: .2rem;
+    padding: 1.5rem;
+}
+
+
+/*** Title testmonial **********************/
+
+.title-testmonial {
+    padding: 1rem 0 5rem;
+}
+
+.title-testmonial h3 {
+    font-size: 1.163rem;
+    font-family: "Fira Sans", sans-serif;
+    color: #a2a2a2;
+    font-weight: 400;
+}
+
+.title-testmonial h2 {
+    font-size: 2.063rem;
+    font-family: "Fira Sans", sans-serif;
+    color: #444444;
+}
+
+.title-testmonial {
+    text-align: center;
+}
+
+/*** About Testimonial**************************/
+
+.testmonial-img-div {
+    width: 15%;
+    border-radius: 50%;
+}
+
+.testmonial-img-div img {
+    border-radius: 50%;
+    width: 100%;
+}
+
+.client-about {
+    width: 84%;
+}
+
+.client-about h2 {
+    font-size: 1rem;
+    font-family: "Fira Sans", sans-serif;
+    color: #444444;
+    font-weight: 500;
+    padding: 0 2rem 0 .5rem;
+}
+
+.client-about h3 {
+    font-size: .8rem;
+    font-family: "Fira Sans", sans-serif;
+    color: #a2a2a2;
+    padding: .2rem 2rem 0 .5rem;
+    font-weight: normal;
+}
+
+.client-review p {
+    font-size: 1rem;
+    font-family: "Fira Sans", sans-serif;
+    color: #a2a2a2;
+    padding-top: 1rem;
+    font-weight: light;
+    text-wrap: wrap;
+}
+
+
+/*** TESTMONIALS TABLET******************************************************************************************/
+
+@media screen and (min-width:768px) and (max-width:1024px) {
+
+    .overlay-testimonal {
+        padding: 4rem 3rem;
+        background-image: url(./assets/images/style-3.png);
+    }
+
+    .cart-testmonial {
+        width: 33%;
+    }
+
+    .cart-testmonial {
+        border: 1px solid #dfdfdf;
+        border-radius: .2rem;
+        padding: 1.5rem;
+    }
+
+
+    /*** Title testmonial **********************/
+
+    .title-testmonial {
+        padding: 1rem 0 3rem;
+    }
+
+    .title-testmonial h2 {
+        font-size: 1.7rem;
+        letter-spacing: 1px;
+    }
+
+    /*** About Testimonial**************************/
+
+    .testmonial-img-div {
+        width: 35%;
+    }
+
+    .client-about {
+        width: 74%;
+    }
+
+    .client-about h2 {
+        font-size: 1.1rem;
+        font-weight: 400;
+        padding: 0;
+        padding-left: .5rem;
+    }
+
+    .client-about h3 {
+        font-size: .9rem;
+        font-weight: 400;
+        padding: 0;
+        padding-left: .5rem;
+    }
+
+    .client-review p {
+        font-size: 1rem;
+        font-weight: light;
+        padding: 0;
+        padding-top: 1rem;
+        line-height: 1.25rem;
+    }
+}
+
+/*** TESTMONIALS MOBILE******************************************************************************************/
+
+@media screen and (min-width:320px) and (max-width:768px) {
+
+    .overlay-testimonal {
+        padding: 4rem 3rem;
+        padding-top: 0rem;
+        background-image: url(./assets/images/style-3.png);
+    }
+
+    .carts-testmonial {
+        flex-wrap: wrap;
+    }
+
+    .cart-testmonial {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .cart-testmonial {
+        border: 1px solid #dfdfdf;
+        border-radius: .2rem;
+        padding: 1.5rem;
+    }
+
+
+    /*** Title testmonial **********************/
+
+    .title-testmonial {
+        padding: 1rem 0 3rem;
+    }
+
+    .title-testmonial h2 {
+        font-size: 1.7rem;
+        letter-spacing: 1px;
+    }
+
+    /*** About Testimonial**************************/
+
+    .testmonial-img-div {
+        width: 15%;
+    }
+
+    .client-about {
+        width: 80%;
+    }
+
+    .client-about h2 {
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+    .client-about h3 {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    .client-review p {
+        font-size: 1.1rem;
+    }
+}
+
+
+/*** BOOKING SECTION ****************************************************************************************************/
+
+.overlay-booking {
+    padding: 4rem 16rem;
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+}
+
+.booking-img-div {
+    /* border: 1px solid red; */
+    width: 50%;
+    border-radius: .3rem;
+    overflow: hidden;
+}
+
+.booking-img-div img {
+    border-radius: .3rem;
+}
+
+.booking-form-div {
+    /* border: 1px solid red; */
+    width: 49%;
+    padding-top: 2.3rem;
+    padding-left: 1rem;
+}
+
+.booking-form-div form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+    /* border: 1px solid red; */
+}
+
+.booking-form-div form input {
+    border: 1px solid #dfdfdf;
+    padding: 1rem 0;
+    outline: none;
+    border-radius: .3rem;
+}
+
+.booking-form-div form input::placeholder {
+    padding: 1rem;
+    font-size: 1rem;
+    font-family: "Fira Sans";
+}
+
+.booking-form-div form input:focus {
+    box-shadow: 0 0 0 .2rem rgba(198, 157, 103, .5);
+    padding-left: 1rem;
+}
+
+.booking-form-div input[type=date] {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: .9rem;
+    font-family: "Fira Sans";
+    color: rgb(117, 117, 117, 1);
+}
+
+.booking-form-div input[type=number] {
+    padding-right: 1rem;
+    font-size: 1rem;
+    font-family: "Fira Sans";
+    color: rgb(117, 117, 117, 1);
+}
+
+input[type="button"] {
+    background-color: #a4783d;
+    border-color: #9b713a;
+    color: #ffffff;
+    width: 100%;
+    font-family: "Fira Sans";
+    font-size: 1rem;
+}
+
+.booking-form-div p {
+    font-size: .8rem;
+    font-family: "Fira Sans", sans-serif;
+    color: #a2a2a2;
+    padding-top: 1rem;
+    padding-left: .2rem;
+    font-weight: light;
+}
+
+.booking-form-div p>a {
+    font-size: .8rem;
+    font-family: "Fira Sans", sans-serif;
+    color: #bc8c4c;
+    padding-top: 1rem;
+    padding-left: .2rem;
+    font-weight: light;
+}
+
+.booking-form-div p>a:hover {
+    color: #886433;
+}
+
+/*** BOOKING SECTION TABLET ****************************************************************************************************/
+
+@media screen and (min-width:768px) and (max-width:1024px) {
+
+    .overlay-booking {
+        padding: 4rem 3rem;
+    }
+
+    .booking-img-div {
+        /* border: 1px solid red; */
+        width: 49.3%;
+        border-radius: .4rem;
+        overflow: hidden;
+    }
+
+    .booking-form-div {
+        width: 49.3%;
+        padding-top: .7rem;
+        padding-left: 1rem;
+    }
+
+    .booking-form-div form {
+        gap: .8rem;
+    }
+
+    .booking-form-div form input {
+        padding: .7rem 0;
+    }
+
+    .booking-form-div p {
+        font-size: .9rem;
+    }
+
+    .booking-form-div p>a {
+        font-size: .9rem;
+    }
+
+}
+
+/*** BOOKING SECTION TABLET ****************************************************************************************************/
+
+@media screen and (min-width:320px) and (max-width:768px) {
+
+    .overlay-booking {
+        padding: 4rem 2.5rem;
+    }
+
+    .booking-img-div {
+        display: none;
+    }
+
+    .booking-form-div {
+        width: 100%;
+        padding-top: unset;
+    }
+
+    .booking-form-div form {
+        gap: 1rem;
+    }
+
+    .booking-form-div form input {
+        padding: 1rem 0;
+        font-size: 1rem;
+    }
+
+    .booking-form-div p {
+        font-size: 1rem;
+    }
+
+    .booking-form-div p>a {
+        font-size: 1rem;
+    }
+
+}
+
+/*** FOOTER **********************************************************************************************/
+
+footer {
+    background-color: #212529;
+
+}
+
+.top-footer,
+.bottom-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16rem;
+}
+
+/*** Top Nav **************************/
+.top-footer {
+    border-bottom: 1px solid #8e9092;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+
+.top-footer img {
+    width: 35%;
+}
+
+.top-footer ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.top-footer ul li a :hover {
+    color: #ffffff;
+    font-family: "Fira Sans", sans-serif;
+}
+
+.top-footer a {
+    color: #adb5bd;
+    font-family: "Fira Sans", sans-serif;
+    font-weight: bold;
+    font-size: .9rem;
+}
+
+/*** Bottom footer**************************/
+
+.bottom-footer {
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+}
+
+.left-bottom-footer p {
+    color: #bdbebf;
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 500;
+    font-size: .9rem;
+}
+
+.left-bottom-footer p>a {
+    color: #8e9092;
+}
+
+.left-bottom-footer p>a:hover {
+    color: #9d9fa2;
+}
+
+.right-bottom-footer ul li a {
+    color: #bdc4cb;
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.right-bottom-footer ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+/*** FOOTER TABLET **********************************************************************************************/
+
+@media screen and (min-width:768px) and (max-width:1024px) {
+    footer {
+        background-color: #212529;
+    }
+
+    .top-footer,
+    .bottom-footer {
+        padding: 0 2.5rem;
+    }
+
+    /*** Top Nav **************************/
+    .top-footer {
+        border-bottom: 1px solid #8e9092;
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+    }
+
+    .bottom-footer {
+        padding: 1.7rem 2.5rem;
+    }
+}
+
+
+/*** FOOTER MOBILE **********************************************************************************************/
+
+@media screen and (min-width:320px) and (max-width:768px) {
+    footer {
+        background-color: #212529;
+        margin-top: 3rem;
+    }
+
+    .top-footer,
+    .bottom-footer {
+        padding: 0 1rem;
+    }
+
+    .top-footer {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .top-footer .left-footer {
+        width: 100%;
+        text-align: center;
+    }
+
+    .top-footer .left-footer {
+        width: 60%;
+    }
+
+    /*** Top Footer **************************/
+    .top-footer {
+        border-bottom: 1px solid #8e9092;
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+    }
+
+    .top-footer ul {
+        gap: .5rem;
+    }
+
+    /*** Bottom Footer **********************************/
+
+    .bottom-footer {
+        padding: 1.5rem;
+    }
+
+    .left-bottom-footer {
+        margin: 0 auto;
+    }
+
+    .right-bottom-footer {
+        display: none;
+    }
+}
+
+nav{
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
