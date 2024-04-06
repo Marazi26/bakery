@@ -6,12 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bakery</title>
     <link rel="stylesheet" href="./style.css">
-    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet" />
-
+    <link
+        href="https://fonts.googleapis.com/css?family=Fira+Sans:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
+        rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
 </head>
 
 <body>
@@ -21,20 +25,20 @@
             <a href="tel:1234567890"><span>Call us : </span>(123) 456 7890</a>
         </div>
 
-        <div class="bottom-nav ">
+        <div class="bottom-nav">
             <div class="left-nav">
                 <ul class="navbar-nav mr-auto">
                     <li>
-                        <a href="#about">About Us</a>
+                        <a href="#about" id="about-li">About Us</a>
                     </li>
                     <li>
-                        <a href="#service">Our Service</a>
+                        <a href="#service" id="service-li">Our Service</a>
                     </li>
                     <li>
-                        <a href="#team">Our Team</a>
+                        <a href="#team" id="team-li">Our Team</a>
                     </li>
                     <li>
-                        <a href="#testmonial">Testmonials</a>
+                        <a href="#testmonial" id="testmonial-li">Testmonials</a>
                     </li>
                 </ul>
             </div>
@@ -54,15 +58,15 @@
     <header>
         <div class="overlay">
             <img src="./assets/images/logo.svg" alt="Logo">
-            <p>Welcome To Our Restaurant</p>
-            <h1>Really Fresh & Tasty</h1>
+            <p class="wow fadeInDown" data-wow-duration="1s" data-wow-delay="1s">Welcome To Our Restaurant</p>
+            <h1 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">Really Fresh & Tasty</h1>
             <a href="" class="book-a-table">Book A Table</a>
         </div>
     </header>
 
     <main>
-        <section class="about-section">
-            <div class="about-info">
+        <section class="about-section" id="about">
+            <div class="about-info wow zoomInDown" data-wow-duration="1s" data-wow-delay="1s">
                 <h3>Opening Times</h3>
                 <h2>Working Times</h2>
                 <ul>
@@ -70,10 +74,10 @@
                     <li><span>Friday - Saturday : </span> 7:00 am - Midnight</li>
                     <li><span>Saturday - Sunday : </span> 9:00 am - 12:00 pm</li>
                 </ul>
-                <a href="">Book a table</a>
+                <a href="" class="about-booking">Book a table</a>
             </div>
 
-            <div class="about-img-div">
+            <div class="about-img-div wow slideInRight" data-wow-duration="1s" data-wow-delay="1s">
                 <img src="./assets/images/about/about-1.jpg" alt="waiter img">
             </div>
 
@@ -102,16 +106,16 @@
             </div>
         </section>
 
-        <section class="dishes-section">
+        <section class="dishes-section" id="service">
             <div class="overlay-dishes">
-                <div class="dishes-title">
+                <div class="dishes-title wow zoomInDown" data-wow-duration="1s" data-wow-delay="1s">
                     <h3>Featured Food</h3>
                     <h2>Special Dishes</h2>
 
                     <div class="dishes-carts">
                         <div class="left-dishes">
                             <div class="dish-cart">
-                                <div class="dish-img-div">
+                                <div class="dish-img-div wow rollIn" data-wow-duration="1s" data-wow-delay="1s">
                                     <img src="./assets/images/dishes/dish-1.jpg" alt="food">
                                 </div>
                                 <div class="dish-info-div">
@@ -120,7 +124,8 @@
                                         <p>$25</p>
                                     </div>
                                     <div class="dish-bottom-div">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing Eos, earum dicta est
+                                        <p class="wow slideInUp" data-wow-duration="1s" data-wow-delay="1s">Lorem ipsum dolor sit amet, consectetur adipisicing
+                                            Eos, earum dicta est
                                             veniam beatae libero!</p>
                                     </div>
                                 </div>
@@ -214,12 +219,12 @@
 
         <section class="main-menu-section">
             <div class="main-menu-overlay">
-                <div class="title-main-menu">
+                <div class="title-main-menu wow flip">
                     <h3>Great Food</h3>
                     <h2>Main Menu</h2>
                 </div>
 
-                <div class="info-main-menu">
+                <div class="info-main-menu wow lightSpeedInLeft">
 
                     <div class="main-menu-cart">
                         <div class="main-menu-cart-info">
@@ -290,11 +295,11 @@
             </div>
         </section>
 
-        <section class="chefs-section">
+        <section class="chefs-section" id="team">
             <div class="chefs-overlay">
                 <div class="title-chefs">
                     <h3>Great Team</h3>
-                    <h2>Talanted Chefs</h2>
+                    <h2 class="wow rotateIn" data-wow-duration="1s" data-wow-delay="1s">Talanted Chefs</h2>
                 </div>
                 <div class="about-chefs">
 
@@ -303,10 +308,10 @@
                             <img src="./assets/images/chefs/chef-1.jpg" alt="chef img">
                         </div>
                         <div class="chef-info">
-                            <h2>Brian Scott</h2>
+                            <h2 class="wow lightSpeedInLeft" data-wow-duration="1s" data-wow-delay="1s">Brian Scott</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente suscipit, odio nulla
                                 reiciendis!</p>
-                            <ul>
+                            <ul class="wow pulse" data-wow-duration="1s" data-wow-delay="1s">
                                 <li><a href="https://www.facebook.com/pages/create/?ref_type=registration_form"><i
                                             class="fa-brands fa-facebook-f"></i></a></li>
                                 <li><a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a></li>
@@ -358,18 +363,18 @@
             </div>
         </section>
 
-        <section class="testmonial-section">
-            
+        <section class="testmonial-section" id="testmonial">
+
             <div class="overlay-testimonal">
-                
-                <div class="title-testmonial">
+
+                <div class="title-testmonial wow fadeInRight">
                     <h3>Best clients</h3>
                     <h2>Testmonials</h2>
                 </div>
-                
+
                 <div class="carts-testmonial">
-                    
-                    <div class="cart-testmonial">
+
+                    <div class="cart-testmonial wow fadeInBottomLeft">
                         <div class="cart-about-info">
                             <div class="testmonial-img-div">
                                 <img src="./assets/images/testmonials/avatar.jpg" alt="client img">
@@ -380,10 +385,11 @@
                             </div>
                         </div>
                         <div class="client-review">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus enim modi, id dictareiciendis itaque.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus enim modi, id
+                                dictareiciendis itaque.</p>
                         </div>
                     </div>
-    
+
                     <div class="cart-testmonial">
                         <div class="cart-about-info">
                             <div class="testmonial-img-div">
@@ -395,10 +401,11 @@
                             </div>
                         </div>
                         <div class="client-review">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus enim modi, id dictareiciendis itaque.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus enim modi, id
+                                dictareiciendis itaque.</p>
                         </div>
                     </div>
-    
+
                     <div class="cart-testmonial">
                         <div class="cart-about-info">
                             <div class="testmonial-img-div">
@@ -410,7 +417,8 @@
                             </div>
                         </div>
                         <div class="client-review">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus enim modi, id dictareiciendis itaque.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus enim modi, id
+                                dictareiciendis itaque.</p>
                         </div>
                     </div>
                 </div>
@@ -420,34 +428,34 @@
         </section>
 
         <section class="booking-section">
-            
+
             <div class="overlay-booking">
                 <div class="booking-img-div">
                     <img src="./assets/images/contact.jpg" alt="restaurant img">
                 </div>
                 <div class="booking-form-div">
                     <form action="">
-                        <input type="text" placeholder="Your Name" required>
-                        <input type="tel" placeholder="Your Phone" required>
-                        <input type="date" required>
-                        <input type="number" placeholder="Seats" required>
-                        <div class="carets">
+                        <input type="text" placeholder="Your Name" required class="wow fadeInBottomRight" >
+                        <input type="tel" placeholder="Your Phone" required class="wow fadeInBottomRight" >
+                        <input type="date" required class="wow fadeInBottomRight">
+                        <input type="number" placeholder="Seats" required class="wow fadeInBottomRight">
+                        <!-- <div class="carets">
                             <i class="bi bi-caret-up-fill up"></i>
                             <i class="bi bi-caret-down-fill down"></i>
-                        </div>                       
-                        <input type="button" value="Book a table">
+                        </div>                        -->
+                        <input type="button" value="Book a table" class="wow fadeInBottomRight">
                     </form>
                     <!-- <a href="">Book a table</a> -->
                     <p>We don't span customers. Check our<a href="#">Privacy Policy</a></p>
                 </div>
-            </div> 
+            </div>
 
         </section>
     </main>
 
     <footer>
         <div class="overlay-footer">
-        
+
             <div class="top-footer ">
                 <div class="left-footer">
                     <img src="./assets/images/navbar-brand.svg" alt="Logo">
@@ -488,7 +496,9 @@
         </div>
     </footer>
 
-
+    <script src="./scripts/script.js" defer> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script> new WOW().init()</script>
 </body>
 
 </html>
