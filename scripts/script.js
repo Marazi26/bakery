@@ -4,48 +4,57 @@ function changeBg(){
     let bottomNav = document.querySelector(".bottom-nav")
     if(scrollValue > 3){
         bottomNav.style.backgroundColor = "#333435"
-        bottomNav.style.transition = "linear 1s"
+        bottomNav.style.transition = "linear"
         bottomNav.style.position = "unset"
         bottomNav.style.position = "sticky"
     } else if (scrollValue < 2) {
         bottomNav.style.backgroundColor = "unset"
     }
 }
-changeBg()
-
 window.addEventListener("scroll", changeBg)
 
 
 function fixedNav(){
     let topNav = document.querySelector(".top-nav")
     let bottomNav = document.querySelector(".bottom-nav")
+    let headerOverlay = document.querySelector(".overlay")
     let scrollValue = window.scrollY;
 
-    if(scrollValue > 3){
+    if(scrollValue > 75){
         topNav.style.display = "none"
-        bottomNav.style.position = "sticky"
+        bottomNav.style.position = "fixed"
+        bottomNav.style.backgroundColor = "#212529"
         bottomNav.style.top = "0"
-    } else if (scrollValue < 2) {
+        bottomNav.style.left = "0"
+        bottomNav.style.right = "0"
+        headerOverlay.style.marginTop = "8rem"
+    } else if (scrollValue < 75) {
         topNav.style.display = "block"
-        bottomNav.style.position = "static
+        topNav.style.transition = "linear 1s"
+        bottomNav.style.position = "static"
+        headerOverlay.style.marginTop = "unset"
+        bottomNav.style.backgroundColor = "#212529"
+
     }
 }
+window.addEventListener("scroll", fixedNav)
 
-// window.addEventListener("scroll", fixedNav)
 
 // function changeLiColors(){
 //     let scrollValue = window.scrollY;
 //     console.log(scrollValue)
-//     let [aboutLi,serviceLi,teamLi,testmonialLi] = 
-//     document.getElementById(".about-li,.service-li,.team-li,.testmonial-li")
-
+//     // let [aboutLi,serviceLi,teamLi,testmonialLi] = document.querySelector("#about-li,#service-li,#team-li,#testmonial-li")
+//     let aboutLi = document.querySelector("#about-li")
 //     let aboutSection = document.querySelector(".about-section")
-//     aboutSection = aboutSection.scrollHeight
-//     console.log(aboutSection)
+//     // aboutSection = aboutSection.scrollHeight
+//     // console.log(aboutSection.scrollHeight)
 
-//     if(scrollValue === aboutSection){
-//         aboutLi.style.color = "a4783d"
-//         console.log("exav")
+//     if(scrollValue = 160){
+//         aboutLi.style.color = "#a4783d"
+//         // alert("exav")
+//     } else if (scrollValue > 160){
+//         aboutLi.style.color = "#ffffff"
 //     }
 // }
-// changeLiColors()
+
+// window.addEventListener("scroll", changeLiColors)
