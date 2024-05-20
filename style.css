@@ -346,7 +346,7 @@ header {
 @media screen and (min-width:320px) and (max-width:768px) {
 
     .overlay {
-        padding: 8rem 1rem;
+        padding: 5rem 1rem;
     }
 
     .overlay img {

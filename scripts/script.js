@@ -19,42 +19,24 @@ function fixedNav(){
     let bottomNav = document.querySelector(".bottom-nav")
     let headerOverlay = document.querySelector(".overlay")
     let scrollValue = window.scrollY;
+    let media = window.matchMedia("(min-width: 768px)")
 
-    if(scrollValue > 75){
+    if(scrollValue > 75 && !media.matches) {
         topNav.style.display = "none"
         bottomNav.style.position = "fixed"
         bottomNav.style.backgroundColor = "#212529"
         bottomNav.style.top = "0"
         bottomNav.style.left = "0"
         bottomNav.style.right = "0"
-        headerOverlay.style.marginTop = "8rem"
     } else if (scrollValue < 75) {
         topNav.style.display = "block"
         topNav.style.transition = "linear 1s"
         bottomNav.style.position = "static"
-        headerOverlay.style.marginTop = "unset"
+        headerOverlay.style.marginTop = "0rem"
         bottomNav.style.backgroundColor = "#212529"
-
+    } else if ( media.matches ) {
+        headerOverlay.style.marginTop = "0rem"
     }
 }
 window.addEventListener("scroll", fixedNav)
 
-
-// function changeLiColors(){
-//     let scrollValue = window.scrollY;
-//     console.log(scrollValue)
-//     // let [aboutLi,serviceLi,teamLi,testmonialLi] = document.querySelector("#about-li,#service-li,#team-li,#testmonial-li")
-//     let aboutLi = document.querySelector("#about-li")
-//     let aboutSection = document.querySelector(".about-section")
-//     // aboutSection = aboutSection.scrollHeight
-//     // console.log(aboutSection.scrollHeight)
-
-//     if(scrollValue = 160){
-//         aboutLi.style.color = "#a4783d"
-//         // alert("exav")
-//     } else if (scrollValue > 160){
-//         aboutLi.style.color = "#ffffff"
-//     }
-// }
-
-// window.addEventListener("scroll", changeLiColors)
